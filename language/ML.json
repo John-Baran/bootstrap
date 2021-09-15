@@ -217,13 +217,13 @@
         "updater": {
             "UPDATER_DESC": "update indo enn ariyaan.",
             "UPDATE": "*ningalude bot up-to-date aan!*",
-            "NEW_UPDATE": "*𝐑𝐀𝐆𝐀𝐍𝐎𝐑𝐊 Puthiya Update Vannittund* \n\n update cheyummathin munb support groupil chodhikkuka , allenkkil error veran chance und\n\nChanges:\n```",
+            "NEW_UPDATE": "𝙍𝙖𝙜𝙖𝙣𝙤𝙧𝙠 𝙣𝙚𝙬 𝙪𝙥𝙙𝙖𝙩𝙚 𝙫𝙖𝙣𝙣𝙞𝙩𝙩𝙪𝙣𝙙 𝙉𝙖𝙣𝙗𝙖𝙖 🥳 \n\n 𝘾𝙝𝙖𝙖𝙙𝙞𝙠𝙠𝙚𝙧𝙞 𝙘𝙝𝙚𝙮𝙮𝙖𝙡𝙡𝙚... 𝘼𝙖𝙙𝙝𝙮𝙖𝙢 𝙂𝙧𝙤𝙪𝙥𝙞𝙡 𝙘𝙝𝙤𝙞𝙠𝙠 , 𝘼𝙡𝙡𝙚𝙣𝙠𝙞𝙡 𝙚𝙧𝙧𝙤𝙧 𝙠𝙞𝙩𝙩𝙖𝙣 𝙘𝙝𝙖𝙣𝙘𝙚 𝙪𝙣𝙙 😅\n\n𝘾𝙝𝙖𝙣𝙜𝙚𝙨:\n",
             "UPDATE_NOW_DESC": "botine update cheyaan.",
-            "UPDATING": "```Updating..🐥```",
+            "UPDATING": "𝙐𝙥𝙙𝙖𝙩𝙚 𝙖𝙖𝙠𝙪𝙣𝙣𝙪. 𝙊𝙧𝙪 5 𝙢𝙞𝙣𝙪𝙩𝙚 𝙬𝙖𝙞𝙩 𝙖𝙠𝙠 💖",
             "INVALID_HEROKU": "*❌ ningal thanna Heroku information thett aan !*",
-            "UPDATED": "*Updated 🤠✅*",
-            "UPDATED_LOCAL": "*✅ vijayagaramayi Update cheythu!*",
-            "AFTER_UPDATE": "*😎 𝐑𝐀𝐆𝐀𝐍𝐎𝐑𝐊 Restarting..*"
+            "UPDATED": "𝙐𝙥𝙙𝙖𝙩𝙚 𝙖𝙖𝙮𝙞 🥳",
+            "UPDATED_LOCAL": "𝙐𝙥𝙙𝙖𝙩𝙚 𝙖𝙖𝙮𝙞",
+            "AFTER_UPDATE": "𝙍𝙚𝙨𝙩𝙖𝙧𝙩𝙞𝙣𝙜 𝙖𝙣𝙙 𝙖𝙥𝙥𝙡𝙮𝙞𝙣𝙜 𝙘𝙝𝙖𝙣𝙜𝙚𝙨 ✅"
         },
         "weather": {
             "WEATHER_DESC": "ningal therrunna sthalathe kaalavastha kaanikkum.",
