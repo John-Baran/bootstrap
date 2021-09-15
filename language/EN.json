@@ -219,11 +219,11 @@
             "UPDATE": "*YOU ARE USING THE LATEST VERSION OF RAGANORK 🥳!*",
             "NEW_UPDATE": "*𝐑𝐀𝐆𝐀𝐍𝐎𝐑𝐊 Update Available*\n\n please ask support group before updating. Otherwise chance to get error\n https://chat.whatsapp.com/G18G7QjUqi6GqkWvUwre4u \n\nChanges:\n```",
             "UPDATE_NOW_DESC": "It makes updates.",
-            "UPDATING": "*UPDATING...* (oru 5-8 minute aavum)",
+            "UPDATING": "𝙐𝙥𝙙𝙖𝙩𝙚 𝙖𝙖𝙠𝙪𝙣𝙣𝙪. 𝙊𝙧𝙪 5 - 8 𝙢𝙞𝙣𝙪𝙩𝙚 𝙬𝙖𝙞𝙩 𝙖𝙠𝙠 💥",
             "INVALID_HEROKU": "*❌ Your Heroku information is wrong!*",
-            "UPDATED": "*UPDATE AAYI 😅*",
+            "UPDATED": "𝙐𝙥𝙙𝙖𝙩𝙚 𝙖𝙖𝙮𝙞 🥳",
             "UPDATED_LOCAL": "*✅ Successfully Updated!*",
-            "AFTER_UPDATE": "*⚡ _𝙍𝘼𝙂𝘼𝙉𝙊𝙍𝙆 RESTARTING_ ⚡*"
+            "AFTER_UPDATE": "𝙍𝙚𝙨𝙩𝙖𝙧𝙩𝙞𝙣𝙜 𝙖𝙣𝙙 𝙖𝙥𝙥𝙡𝙮𝙞𝙣𝙜 𝙘𝙝𝙖𝙣𝙜𝙚𝙨 ✅"
         },
         "weather": {
             "WEATHER_DESC": "Shows the weather.",
