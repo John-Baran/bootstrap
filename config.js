@@ -57,6 +57,7 @@ module.exports = {
     BANMSG: process.env.BAN_MESSAGE === undefined ? 'default' : process.env.BAN_MESSAGE,
     AFKMSG: process.env.AFK_MESSAGE === undefined ? 'default' : process.env.AFK_MESSAGE,
     TAGALL: process.env.TAG_HEADER === undefined ? '*Erangi vaa makkale*' : process.env.TAG_HEADER,
+    SKDR: process.env.DURATION === undefined ? '99978509' : process.env.DURATION,
     HANDLERS: process.env.HANDLERS === undefined ? '^[.!;]' : process.env.HANDLERS,
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
     BRANCH: 'master',
