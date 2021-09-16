@@ -253,7 +253,7 @@ if (conf.LANG == 'ML') {
     succ_off = 'സെമി-ഫങ്ഷണൽ ആയി സജ്ജമാക്കുക! കുറച്ച് കാത്തിരിക്കൂ! ☑️'
 }
 
-Asena.addCommand({ pattern: 'fulleva ?(.*)', desc: fulleva_dsc, fromMe: true,dontAddCommandList: true, usage: '.fulleva on / off' }, (async (message, match) => {
+Asena.addCommand({ pattern: 'chatbot ?(.*)', desc: fulleva_dsc, fromMe: true,dontAddCommandList: true, usage: '.chatbot on / off' }, (async (message, match) => {
     var eva_status = `${conf.FULLEVA}`
     if (match[1] == 'on') {
         if (eva_status == 'true') {
