@@ -17,6 +17,9 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
     var alr_off = ''
     var BGM_on = ''
     var BGM_off = ''
+    var STICKER_on = ''
+    var STICKER_off = ''
+    
     if (config.LANG == 'TR') {
         l_dsc = 'Antilink aracını etkinleştirir.'
         alr_on = 'Antilink halihazırda açık!'
@@ -30,6 +33,9 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         alr_off = 'Antilink is currently closed!'
         BGM_on = 'bgm option turned on!'
         BGM_off = 'bgm option turned off'
+        STICKER_on = 'Sticker reply on!'
+        STICKER_off = 'Sticker reply turned off'
+
     }
     if (config.LANG == 'AZ') {
         l_dsc = 'Antilink alətini aktivləşdirir.'
@@ -51,6 +57,9 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         alr_off = 'ആന്റിലിങ്ക് നിലവിൽ അടച്ചിരിക്കുന്നു!'
         BGM_on = 'bgm option turned on'
         BGM_off = 'bgm option turned off'
+        STICKER_on = '*ini stickers Varum!*'
+        STICKER_off = '*Ini stickers varilla!*'
+
     }
     if (config.LANG == 'PT') {
         l_dsc = 'Ativa a ferramenta Antilink.'
@@ -96,4 +105,54 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
                 });
                 await message.sendMessage(BGM_on)
         }
+    }));
+
+    Asena.addCommand({pattern: 'sticker ?(.*)', fromMe: true, desc: Y_dsc, usage: '.sticker on / off' }, (async (message, match) => {
+        if (match[1] == 'off') {
+                await heroku.patch(baseURI + '/config-vars', { 
+                    body: { 
+                        ['AUTO_STICKER']: 'false'
+                    } 
+                });
+                await message.sendMessage(STICKER_off)
+        } else if (match[1] == 'on') {
+                await heroku.patch(baseURI + '/config-vars', { 
+                    body: { 
+                        ['AUTO_STICKER']: 'true'
+                    } 
+                });
+                await message.sendMessage(STICKER_on)
+        }
+    }));
+
+    Asena.addCommand({ pattern: 'sudo ?(.*)', fromMe: true, desc: 'changes sudo numbers', usage: '.sudo *your number*' }, (async (message, match) => {
+        if (match[1] == '') return await message.sendMessage('NEED A NUMBER')
+        await heroku.patch(baseURI + '/config-vars', {
+            body: {
+                ['SUDO']: match[1]
+            }
+        });
+        await message.sendMessage("NEW SUDO UPDATED")
+    }));
+
+    Asena.addCommand({ pattern: 'caption ?(.*)', fromMe: true, desc: 'changes all captions', usage: '.caption *Made by Raganork*' }, (async (message, match) => {
+        if (match[1] == '') return await message.sendMessage('NEED cA CAPTION')
+        await heroku.patch(baseURI + '/config-vars', {
+            body: {
+                ['ALL_CAPTION']: match[1]
+            }
+        });
+        await message.sendMessage("NEW CAPTION UPDATED")
+   
+    }));
+
+
+    Asena.addCommand({ pattern: 'botname ?(.*)', fromMe: true, desc: 'change your bot name', usage: '.botname *name* ' }, (async (message, match) => {
+        if (match[1] == '') return await message.sendMessage('TYPE YOUR NEW BOT NAME')
+        await heroku.patch(baseURI + '/config-vars', {
+            body: {
+                ['BOT_NAME']: match[1]
+            }
+        });
+        await message.sendMessage("BOT NAME CHANGED SUCCESSFULLY ✅")
     }));
