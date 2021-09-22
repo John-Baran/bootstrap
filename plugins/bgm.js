@@ -21,6 +21,10 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
     var STICKER_off = ''
     
     if (config.LANG == 'TR') {
+        
+        STICKER_on = 'Sticker reply on!'
+        STICKER_off = 'Sticker reply turned off'
+        Y_dsc = 'Turns sticker On and Off'
         l_dsc = 'Antilink aracını etkinleştirir.'
         alr_on = 'Antilink halihazırda açık!'
         alr_off = 'Antilink halihazırda kapalı!'
@@ -28,6 +32,8 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         BGM_off = 'bgm option turned off'
     }
     if (config.LANG == 'EN') {
+
+        Y_dsc = 'Turns sticker On and Off'
         l_dsc = 'turn on and turn of bgm. -bot owner command'
         alr_on = 'Antilink is already open!'
         alr_off = 'Antilink is currently closed!'
@@ -38,6 +44,10 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
 
     }
     if (config.LANG == 'AZ') {
+
+        STICKER_on = 'Sticker reply on!'
+        STICKER_off = 'Sticker reply turned off'
+        Y_dsc = 'Turns sticker On and Off'
         l_dsc = 'Antilink alətini aktivləşdirir.'
         alr_on = 'Antilink hazırda açıqdır!'
         alr_off = 'Antilink hazırda bağlıdır!'
@@ -45,6 +55,10 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         BGM_off = '*bgm option turned off*'
     }
     if (config.LANG == 'HI') {
+
+        STICKER_on = 'Sticker reply on!'
+        STICKER_off = 'Sticker reply turned off'
+        Y_dsc = 'Turns sticker On and Off'
         l_dsc = 'एंटीलिंक टूल को सक्रिय करता है।'
         alr_on = 'एंटीलिंक पहले से ही खुला है!'
         alr_off = 'एंटीलिंक वर्तमान में बंद है!'
@@ -52,6 +66,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         BGM_off = 'bgm option turned off'
     }
     if (config.LANG == 'ML') {
+        Y_dsc = 'Turns sticker On and Off'
         l_dsc = 'ആന്റിലിങ്ക് ഉപകരണം സജീവമാക്കുന്നു.'
         alr_on = 'ആന്റിലിങ്ക് ഇതിനകം തുറന്നു!'
         alr_off = 'ആന്റിലിങ്ക് നിലവിൽ അടച്ചിരിക്കുന്നു!'
@@ -62,6 +77,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
 
     }
     if (config.LANG == 'PT') {
+
         l_dsc = 'Ativa a ferramenta Antilink.'
         alr_on = 'O Antilink já está aberto!'
         alr_off = 'Antilink está fechado no momento!'
@@ -69,6 +85,9 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         BGM_off = 'bgm option turned off'
     }
     if (config.LANG == 'RU') {
+        
+        STICKER_on = 'Sticker reply on!'
+        STICKER_off = 'Sticker reply turned off'
         l_dsc = 'Активирует инструмент Antilink.'
         alr_on = 'Антилинк уже открыт!'
         alr_off = 'Антилинк сейчас закрыт!'
@@ -76,6 +95,9 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         BGM_off = 'bgm option turned off'
     }
     if (config.LANG == 'ES') {
+
+        STICKER_on = 'Sticker reply on!'
+        STICKER_off = 'Sticker reply turned off'
         l_dsc = 'Activa la herramienta Antilink.'
         alr_on = '¡Antilink ya está abierto!'
         alr_off = '¡Antilink está cerrado actualmente!'
@@ -83,6 +105,9 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         BGM_off = 'bgm option turned off!'
     }
     if (config.LANG == 'ID') {
+
+        STICKER_on = 'Sticker reply on!'
+        STICKER_off = 'Sticker reply turned off'
         l_dsc = 'Mengaktifkan alat Antilink.'
         alr_on = 'Antilink sudah terbuka!'
         alr_off = 'Antilink saat ini ditutup!'
@@ -107,7 +132,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         }
     }));
 
-    Asena.addCommand({pattern: 'sticker ?(.*)', fromMe: true, desc: Y_dsc, usage: '.sticker on / off' }, (async (message, match) => {
+    Asena.addCommand({pattern: 'sticker ?(.*)', fromMe: true, desc: 'Turns Sticker on/off', usage: '.sticker on / off' }, (async (message, match) => {
         if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
