@@ -217,7 +217,7 @@
         "updater": {
             "UPDATER_DESC": "Checks the update.",
             "UPDATE": "*YOU ARE USING THE LATEST VERSION OF RAGANORK 🥳!*",
-            "NEW_UPDATE": "*𝐑𝐀𝐆𝐀𝐍𝐎𝐑𝐊 Update Available*\n\n please ask support group before updating. Otherwise chance to get error\n https://chat.whatsapp.com/G18G7QjUqi6GqkWvUwre4u \n\nChanges:\n```",
+            "NEW_UPDATE": "𝙍𝙖𝙜𝙖𝙣𝙤𝙧𝙠 𝙣𝙚𝙬 𝙪𝙥𝙙𝙖𝙩𝙚 𝙫𝙖𝙣𝙣𝙞𝙩𝙩𝙪𝙣𝙙 𝙉𝙖𝙣𝙗𝙖𝙖 🥳 \n\n 𝘾𝙝𝙖𝙖𝙙𝙞𝙠𝙠𝙚𝙧𝙞 𝙘𝙝𝙚𝙮𝙮𝙖𝙡𝙡𝙚... 𝘼𝙖𝙙𝙝𝙮𝙖𝙢 𝙂𝙧𝙤𝙪𝙥𝙞𝙡 𝙘𝙝𝙤𝙞𝙠𝙠 , 𝘼𝙡𝙡𝙚𝙣𝙠𝙞𝙡 𝙚𝙧𝙧𝙤𝙧 𝙠𝙞𝙩𝙩𝙖𝙣 𝙘𝙝𝙖𝙣𝙘𝙚 𝙪𝙣𝙙 😅\n\n𝘾𝙝𝙖𝙣𝙜𝙚𝙨:\n",
             "UPDATE_NOW_DESC": "It makes updates.",
             "UPDATING": "𝙐𝙥𝙙𝙖𝙩𝙚 𝙖𝙖𝙠𝙪𝙣𝙣𝙪. 𝙊𝙧𝙪 5 - 8 𝙢𝙞𝙣𝙪𝙩𝙚 𝙬𝙖𝙞𝙩 𝙖𝙠𝙠 💥",
             "INVALID_HEROKU": "*❌ Your Heroku information is wrong!*",
