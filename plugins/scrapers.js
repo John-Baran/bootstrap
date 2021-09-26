@@ -1108,18 +1108,7 @@ else if (config.WORKTYPE == 'public') {
           )
       },
     )
-        Asena.addCommand({ pattern: 'owner ?(.*)', fromMe: false, desc: 'owner number' }, (async (message, match) => {
-
-
-const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
-            + 'VERSION:3.0\n' 
-            + 'FN:config.BOTSK\n' // full name
-            + 'ORG:script SOURAVKL11;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=config.NBSK:+919074309534\n' // WhatsApp ID + phone number
-            + 'END:VCARD'
-await message.client.sendMessage(message.jid,{displayname: "config.BOTSK", vcard: vcard}, MessageType.contact)
-}))
-
+       
     Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: false, desc: Slang.LY_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid, Slang.NEED, MessageType.text);
