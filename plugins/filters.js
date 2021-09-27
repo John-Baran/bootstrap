@@ -7,7 +7,7 @@ const jid = Config.DISBGM != false ? Config.DISBGM.split(',') : [];
 const Language = require('../language');
 const Lang = Language.getString('filters');
 
-if (Config.WORKTYPE == 'private') {
+if (Config.WORKTYPE == 'public') {
 
 Asena.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC, dontAddCommandList: true}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
@@ -36,7 +36,7 @@ Asena.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, don
     }
 
     del = await FilterDb.deleteFilter(message.jid, match[0].replace(/['"“]+/g, ''));
-    
+
     if (!del) {
         await message.client.sendMessage(message.jid,Lang.ALREADY_NO_FILTER, MessageType.text)
     } else {
