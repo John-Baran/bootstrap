@@ -116,4 +116,17 @@ if(pattern.test(message.message)){
    await message.client.sendMessage(message.jid, fs.readFileSync('./sticker/' + a + '.webp'), MessageType.sticker, { mimetype: Mimetype.webp, quoted: message.data, ptt: false})
 }
 });
+}
 
+var filtreler = await FilterDb.getFilter(message.jid);
+if (!filtreler) return; 
+filtreler.map(
+    async (filter) => {
+        pattern = new RegExp(filter.dataValues.regex ? filter.dataValues.pattern : ('\\b(' + filter.dataValues.pattern + ')\\b'), 'gm');
+        if (pattern.test(message.message)) {
+            await message.client.sendMessage(message.jid,filter.dataValues.text, MessageType.text, {quoted: message.data});
+        }
+    }
+);
+}));
+}
