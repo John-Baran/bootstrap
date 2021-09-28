@@ -152,4 +152,5 @@ if(pattern.test(message.message)){
 });
 }
 
-
+}));
+	
