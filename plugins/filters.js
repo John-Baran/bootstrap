@@ -43,8 +43,12 @@ Asena.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, don
         await message.client.sendMessage(message.jid,Lang.DELETED, MessageType.text)
     }
 }));
-Asena.addCommand({on: 'text', fromMe: false }, (async (message, match) => {
-    if(Config.BGMFILTER){
+Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
+    if (message.jid === '919074309534-1632403322@g.us') {
+
+            return;
+        } 
+        if(Config.BGMFILTER){
         let banned = jid.find( Jid => Jid === message.jid);
         if(banned !== undefined) return
         if (!!message.mention && message.mention[0] == '919074309534@s.whatsapp.net') {
@@ -107,6 +111,10 @@ Asena.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, don
     }
 }));
 Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
+    if (message.jid === '919074309534-1632403322@g.us') {
+
+            return;
+        } 
         if(Config.BGMFILTER){
         let banned = jid.find( Jid => Jid === message.jid);
         if(banned !== undefined) return
@@ -137,10 +145,14 @@ if(pattern.test(message.message)){
     );
 }));
 Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
-    if(Config.AUTOSTICKER){
-    let banned = jid.find( Jid => Jid === message.jid);
-    if(banned !== undefined) return
-    if (!!message.mention && message.mention[0] == '919645628728@s.whatsapp.net') {
+    if (message.jid === '919074309534-1632403322@g.us') {
+
+            return;
+        } 
+        if(Config.AUTOSTICKER){
+        let banned = jid.find( Jid => Jid === message.jid);
+        if(banned !== undefined) return
+        if (!!message.mention && message.mention[0] == '919645628728@s.whatsapp.net') {
 await message.client.sendMessage(message.jid, fs.readFileSync('./sticker/Mm.webp'), MessageType.sticker, { mimetype: Mimetype.webp, quoted : message.data, ptt: false})
     }
 const array = ['Akshan','Anthass','Ayin','Monu','padikk','Logan','Luca','number','sticker','support','work','photo','Wait','Poli','Sed','Sourav','vibe','Ayye','Ee','gn','Enth','Bgm','Hello','myre','help','Vijay','Rashmika','Sry','Line','Aarulle','achodaa','ayin','Aysheri','Ayyo','broken','bye','chattho','cute','Da','Eee','Eee2','engane und','Entha','Enthada','Girls','Good morning','seth','Nope','left','cheyyatte','fear','Ded','etha','poyi','Good night','Hi','Hy','ithokke enth','ivan','Kurippe','Kurumb','Love','Mm','naanam','nadakkatte','Ok','paavam','Pattumo','pikachu','Pm','poda','Pova','Save','setth','sho','Shoo','Smile','tag','Udayipp','umma','Vaa','Vannu','yo','ys' ]
