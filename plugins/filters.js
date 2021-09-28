@@ -165,5 +165,3 @@ Asena.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, don
     } else {
         await message.client.sendMessage(message.jid,Lang.DELETED, MessageType.text)
     }
-}));
-}
