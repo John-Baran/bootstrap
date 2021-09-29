@@ -67,6 +67,7 @@ if (Config.WORKTYPE == 'private') {
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
+                        var souravkl11 = await axios.get(`https://www.linkpicture.com/q/20210910_065420.jpg`, { responseType: 'arraybuffer' })
                         var cmatch = command.pattern.toString().match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/);
                         var cmmatch = command.pattern.toString().match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2]
                     } catch {
@@ -125,6 +126,7 @@ if (Config.WORKTYPE == 'private') {
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
+                        var souravkl11 = await axios.get(`https://www.linkpicture.com/q/20210910_065420.jpg`, { responseType: 'arraybuffer' })
                         var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/);
                         var mmatch = command.pattern.toString().match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2]
                     } catch {
@@ -173,6 +175,7 @@ if (Config.WORKTYPE == 'private') {
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
+                        var souravkl11 = await axios.get(`https://www.linkpicture.com/q/20210910_065420.jpg`, { responseType: 'arraybuffer' })
                         var cmatch = command.pattern.toString().match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/);
                         var cmmatch = command.pattern.toString().match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2]
                     } catch {
@@ -253,6 +256,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
+                        var souravkl11 = await axios.get(`https://www.linkpicture.com/q/20210910_065420.jpg`, { responseType: 'arraybuffer' })
                         var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/);
                         var mmatch = command.pattern.toString().match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2]
                     } catch {
@@ -301,6 +305,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
+                        var souravkl11 = await axios.get(`https://www.linkpicture.com/q/20210910_065420.jpg`, { responseType: 'arraybuffer' })
                         var cmatch = command.pattern.toString().match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/);
                         var cmmatch = command.pattern.toString().match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2]
                     } catch {
