@@ -47,7 +47,7 @@ module.exports = {
     BOTSK: process.env.BOT_NAME === undefined ? 'PUBLIC BOT' : process.env.BOT_NAME,
     GIF_WEL: process.env.GIF_WEL === undefined ? 'https://c.tenor.com/G9Bu13ZlhVkAAAPo/dancing-funny-dance.mp4' : process.env.GIF_WEL,
     SLINK: process.env.IG === undefined ? 'instagram.com/sourav_kl11' : process.env.IG,
-    JID: process.env.VERIFIED === undefined ? 'instagram.com/sourav_kl11' : process.env.VERIFIED,
+    JID: process.env.VERIFIED === undefined ? '0@s.whatsapp.net' : process.env.VERIFIED,
     GIF_BYE: process.env.GIF_BYE === undefined ? 'https://c.tenor.com/6tlIWiAlT_gAAAPo/cat-impressed-cat-wow.mp4' : process.env.GIF_BYE,
     LOGOSK: process.env.ALL_IMG === undefined ? 'https://www.linkpicture.com/q/rgnk.jpg' : process.env.ALL_IMG,
     SKDL: process.env.DIALOGUE === undefined ? '❤️‍🔥 𝗞𝗜𝗟𝗟𝗔𝗗𝗜𝗦𝗠 𝗡𝗘𝗩𝗘𝗥 𝗘𝗡𝗗𝗦 ❤️‍🔥' : process.env.DIALOGUE,
