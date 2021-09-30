@@ -19,11 +19,19 @@ Asena.addCommand({pattern: 'git', fromMe: false, desc: Lang.WP}, (async (message
 
     var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: `*RAGANORK* BOT CREATED BY SOURAVKL11
+    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: `` + config.BOTSK + ` *MAINTAINED BY* ` + config.PLK + `
     
+    *Owner instagram* : ` + config.IG + `
+    *Owner whatsapp* : ` + config.NBSK + `
+    
+    ⚡ ` + config.SKDL + ` ⚡
+  
+  
     *https://github.com/souravkl11/Raganork*
     
-    ⚡𝙆𝙞𝙡𝙡𝙖𝙙𝙞𝙨𝙢 𝙣𝙚𝙫𝙚𝙧 𝙚𝙣𝙙𝙨⚡
+    _This bot works under the base of fully customisable bot_ *RAGANORK*
+    
+    © ᴀʟʟ ʀɪɢʜᴛꜱ ʀᴇꜱᴇʀᴠᴇᴅ sᴏᴜʀᴀᴠᴋʟ¹¹
 `}) 
 
 }));
