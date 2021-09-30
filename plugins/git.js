@@ -21,7 +21,7 @@ Asena.addCommand({pattern: 'git', fromMe: false, desc: Lang.WP}, (async (message
 
     await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: `` + config.BOTSK + ` *MAINTAINED BY* ` + config.PLK + `
     
-    *Owner instagram* : ` + config.IG + `
+    *Owner instagram* : ` + config.SLINK + `
     *Owner whatsapp* : ` + config.NBSK + `
     
     ⚡ ` + config.SKDL + ` ⚡
