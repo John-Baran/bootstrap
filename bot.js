@@ -539,37 +539,46 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         // ==================== Greetings ====================
         if (msg.messageStubType === 32 || msg.messageStubType === 28) {
 
-            // Görüşürüz Mesajı
-
             var gb = await getMessage(msg.key.remoteJid, 'goodbye');
-
-            var blogo = await axios.get(config.GIF_BYE, { responseType: 'arraybuffer' })
-
             if (gb !== false) {
-
-                await conn.sendMessage(msg.key.remoteJid, Buffer.from(blogo.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message});
-
+                if (gb.message.includes('{pp}')) {
+                let pp 
+                try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
+                 var souravjson = await conn.groupMetadata(msg.key.remoteJid)
+                await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
+                await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message.replace('{pp}', '').replace('{gphead}', souravjson.subject).replace('{gpmaker}', souravjson.owner).replace('{gpdesc}', souravjson.desc).replace('{owner}', conn.user.name) }); });                           
+            } else if (gb.message.includes('{gif}')) {
+                var souravjson = await conn.groupMetadata(msg.key.remoteJid)
+                //created by afnanplk and modified by souravkl11
+                    var skl = await axios.get(config.GIF_BYE, { responseType: 'arraybuffer' })
+                await conn.sendMessage(msg.key.remoteJid, Buffer.from(skl.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message.replace('{gif}', '').replace('{gphead}', souravjson.subject).replace('{gpmaker}', souravjson.owner).replace('{gpdesc}', souravjson.desc).replace('{owner}', conn.user.name) });
+            } else {
+                var souravjson = await conn.groupMetadata(msg.key.remoteJid)
+                   await conn.sendMessage(msg.key.remoteJid,gb.message.replace('{gphead}', souravjson.subject).replace('{gpmaker}', souravjson.owner).replace('{gpdesc}', souravjson.desc).replace('{owner}', conn.user.name), MessageType.text);
             }
-
+          }  //thanks to farhan      
             return;
-
         } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
-
-            // Hoşgeldin Mesajı
-
-            var gb = await getMessage(msg.key.remoteJid);
-
-            var wlogo = await axios.get(config.GIF_WEL, { responseType: 'arraybuffer' })
-
+            // welcome
+             var gb = await getMessage(msg.key.remoteJid);
             if (gb !== false) {
-
-                await conn.sendMessage(msg.key.remoteJid, Buffer.from(wlogo.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message});
-
+                if (gb.message.includes('{pp}')) {
+                let pp
+                try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
+                    var souravjson = await conn.groupMetadata(msg.key.remoteJid)
+                await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
+                    //created by afnanplk and modified by souravkl11
+                await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message.replace('{pp}', '').replace('{gphead}', souravjson.subject).replace('{gpmaker}', souravjson.owner).replace('{gpdesc}', souravjson.desc).replace('{owner}', conn.user.name) }); });                           
+            } else if (gb.message.includes('{gif}')) {
+                var skl = await axios.get(config.WEL_GIF, { responseType: 'arraybuffer' })
+                await conn.sendMessage(msg.key.remoteJid, Buffer.from(skl.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message.replace('{gif}', '').replace('{gphead}', souravjson.subject).replace('{gpmaker}', souravjson.owner).replace('{gpdesc}', souravjson.desc).replace('{owner}', conn.user.name) });
+            } else {
+                   var souravjson = await conn.groupMetadata(msg.key.remoteJid)
+                   await conn.sendMessage(msg.key.remoteJid,gb.message.replace('{gphead}', souravjson.subject).replace('{gpmaker}', souravjson.owner).replace('{gpdesc}', souravjson.desc).replace('{owner}', conn.user.name), MessageType.text);
             }
-
-            return;
-
-        }
+          }         
+            return;                               
+    }
         // ==================== End Greetings ====================
 
         // ==================== Blocked Chats ====================
