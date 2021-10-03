@@ -20,7 +20,7 @@ const Language = require('../language');
 const Lang = Language.getString('updater');
 
 
-Asena.addCommand({pattern: 'update$', fromMe: true, dontAddCommandList: true, desc: Lang.UPDATER_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'update check$', fromMe: true, dontAddCommandList: true, desc: Lang.UPDATER_DESC}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
@@ -32,7 +32,7 @@ Asena.addCommand({pattern: 'update$', fromMe: true, dontAddCommandList: true, de
         var degisiklikler = Lang.NEW_UPDATE;
         commits['all'].map(
             (commit) => {
-                degisiklikler += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <souravkl11>\n';
+                degisiklikler += '⏫ [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <souravkl11>\n';
             }
         );
         
@@ -43,7 +43,7 @@ Asena.addCommand({pattern: 'update$', fromMe: true, dontAddCommandList: true, de
     }
 }));
 
-Asena.addCommand({pattern: 'update now$', fromMe: true,dontAddCommandList: true, desc: Lang.UPDATE_NOW_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'update start$', fromMe: true,dontAddCommandList: true, desc: Lang.UPDATE_NOW_DESC}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
