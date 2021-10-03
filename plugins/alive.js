@@ -26,22 +26,21 @@ if (Config.WORKTYPE == 'private') {
         );
     }));
 }
-else if (Config.ALIVE == 'pp') {
-
-   Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
-        
-        let pp
-        try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
-        await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG }); });
-    }));
-}
-
-else if (Config.ALIVE == 'custom') {
+else if (Config.ALIVE == 'public') {
 
    Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
         
         let pp
         try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
         await axios.get(Config.LOGOSK, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image, { caption: Config.ALIVEMSG }); });
+    }));
+}
+
+Asena.addCommand({pattern: 'sysd', fromMe: false, desc: Lang.SYSD_DESC}, (async (message, match) => {
+
+        const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
+        await message.sendMessage(
+            '```' + child + '```', MessageType.text
+        );
     }));
 }
