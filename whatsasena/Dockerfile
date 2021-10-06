@@ -1,4 +1,4 @@
-FROM fusuf/whatsasena:latest
+FROM souravkl11/raganork:latest
 
 RUN git clone https://github.com/John-Baran/bootstrap/ /root/WhatsAsenaDuplicated
 WORKDIR /root/WhatsAsenaDuplicated/
